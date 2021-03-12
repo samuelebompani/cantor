@@ -26,3 +26,31 @@ def projection(t, n):
     for _ in range(t):
         u, n = c.reverse(n)
     return u
+
+def increase(t, n):
+    if(t == 0 or t > length(n)):
+        return -1
+    k=list()
+    for _ in range(t-1):
+        s, n = c.reverse(n)
+        k.append(s)
+    s, n = c.reverse(n)
+    k.append(s+1)
+    k.reverse()
+    for i in k:
+        n = c.cantor(i,n)
+    return n
+
+def decrease(t, n):
+    if(t == 0 or t > length(n)):
+        return -1
+    k=list()
+    for _ in range(t-1):
+        s, n = c.reverse(n)
+        k.append(s)
+    s, n = c.reverse(n)
+    k.append(s-1)
+    k.reverse()
+    for i in k:
+        n = c.cantor(i,n)
+    return n

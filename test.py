@@ -58,3 +58,15 @@ assert(il.decode(100)==[5,2,0])
 assert(il.projection(3,18144)==5)
 assert(il.projection(2,100)==2)
 print("Ok integer list encoding")
+
+#increase
+assert(il.increase(1,10)==14)
+assert(il.increase(3,25)==52)
+assert(il.increase(0,34)==-1)
+assert(il.increase(1,5)==8)
+print("Ok integer list increase")
+
+#decrease
+assert(il.decrease(1,5)==3)
+print(il.decrease(1,10))
+print("Ok integer list decrease")
