@@ -1,7 +1,7 @@
 import math
 
 def cantor(x,y):
-    return (x+y)*(x+y+1)/2+y+1
+    return round((x+y)*(x+y+1)/2+y+1)
 
 def gamma(n):
     return math.floor((-1 + math.sqrt(8*n-7))/2)
@@ -16,3 +16,9 @@ def reverse(n):
     g = gamma(n)
     d = math.floor(n - cantor(g, 0))
     return (g - d, d)
+
+def cantorZero(x,y):
+    return cantor(x,y)-1
+
+def reverseZero(n):
+    return reverse(n+1)

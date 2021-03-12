@@ -1,4 +1,5 @@
 import cantor
+import integerList as il
 
 #cantor(x,y)
 assert(cantor.cantor(0,0)==1)
@@ -34,3 +35,26 @@ assert(cantor.reverse(13)==(2,2))
 assert(cantor.reverse(8)==(2,1))
 assert(cantor.reverse(23)==(5,1))
 print("ok reverse")
+
+#cantorZero
+assert(cantor.cantorZero(0,0)==0)
+assert(cantor.cantorZero(0,3)==9)
+assert(cantor.cantorZero(4,0)==10)
+assert(cantor.cantorZero(3,2)==17)
+print("Ok cantor zero")
+
+#reverse(n)
+assert(cantor.reverseZero(9)==(0,3))
+assert(cantor.reverseZero(12)==(2,2))
+assert(cantor.reverseZero(7)==(2,1))
+assert(cantor.reverseZero(22)==(5,1))
+print("ok reverse zero")
+
+#integer list
+assert(il.encode([1,2,5])==18144)
+assert(il.encode([0,1])==6)
+assert(il.decode(18144)==[1,2,5])
+assert(il.decode(100)==[5,2,0])
+assert(il.projection(3,18144)==5)
+assert(il.projection(2,100)==2)
+print("Ok integer list encoding")
