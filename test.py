@@ -1,8 +1,36 @@
 import cantor
 
+#cantor(x,y)
 assert(cantor.cantor(0,0)==1)
 assert(cantor.cantor(0,3)==10)
 assert(cantor.cantor(4,0)==11)
 assert(cantor.cantor(3,2)==18)
+print("Ok cantor")
 
-print("Ok")
+#gamma(n)
+assert(cantor.gamma(486)==30)
+assert(cantor.gamma(12)==4)
+assert(cantor.gamma(1)==0)
+assert(cantor.gamma(9)==3)
+print("Ok gamma")
+
+#sx(n)
+assert(cantor.sx(9)==1)
+assert(cantor.sx(13)==2)
+assert(cantor.sx(18)==3)
+assert(cantor.sx(1)==0)
+print("Ok sx")
+
+#dx(n)
+assert(cantor.dx(12)==1)
+assert(cantor.dx(19)==3)
+assert(cantor.dx(22)==0)
+assert(cantor.dx(1)==0)
+print("Ok dx")
+
+#reverse(n)
+assert(cantor.reverse(10)==(0,3))
+assert(cantor.reverse(13)==(2,2))
+assert(cantor.reverse(8)==(2,1))
+assert(cantor.reverse(23)==(5,1))
+print("ok reverse")
