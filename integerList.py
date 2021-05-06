@@ -10,7 +10,7 @@ def encode(l):
 def decode(n):
     k=list()
     while(n!=0):
-        s,d = c.reverse(n)
+        s, d = c.reverse(n)
         k.append(s)
         n=d
     return k
